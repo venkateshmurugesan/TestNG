@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.rerunn.WithoutKnownFailedd"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="org.rerunn.A"/>
+      <class name="org.rerunn.B"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="org.rerunn.A">
+        <methods>
+          <include name="testA2"/>
+        </methods>
+      </class> <!-- org.rerunn.A -->
+      <class name="org.rerunn.B">
+        <methods>
+          <include name="testB2"/>
+        </methods>
+      </class> <!-- org.rerunn.B -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
